@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Botstrap4heros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Context</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @botstrap4heros.each do |botstrap4hero| %>
+      <tr>
+        <td><%= botstrap4hero.title %></td>
+        <td><%= botstrap4hero.context %></td>
+        <td><%= link_to 'Show', botstrap4hero %></td>
+        <td><%= link_to 'Edit', edit_botstrap4hero_path(botstrap4hero) %></td>
+        <td><%= link_to 'Destroy', botstrap4hero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Botstrap4hero', new_botstrap4hero_path %>
